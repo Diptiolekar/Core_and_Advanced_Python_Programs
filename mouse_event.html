@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mouse Events Demo</title>
+  <style>
+    #box {
+      width: 300px;
+      height: 200px;
+      background-color: lightgray;
+      text-align: center;
+      line-height: 200px;
+      border: 2px solid black;
+      margin: 50px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="box">Hover or Click Me</div>
+
+<script>
+  const box = document.getElementById("box");
+
+  box.addEventListener("click", () => {
+    box.textContent = "Clicked!";
+  });
+
+  box.addEventListener("mouseover", () => {
+    box.style.backgroundColor = "lightblue";
+    box.textContent = "Mouse Over";
+  });
+
+  box.addEventListener("mouseout", () => {
+    box.style.backgroundColor = "lightpink";
+    box.textContent = "Mouse Out";
+  });
+
+  box.addEventListener("mousedown", () => {
+    box.textContent = "Mouse Down";
+  });
+
+  box.addEventListener("mouseup", () => {
+    box.textContent = "Mouse Up";
+  });
+
+  box.addEventListener("mousemove", () => {
+    box.textContent = "Mouse Move";
+  });
+</script>
+
+</body>
+</html>
